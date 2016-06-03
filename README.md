@@ -3,7 +3,7 @@
 Calculates theoretical uncertainties for W+Jets and Z+Jets
 
 Tested in CMSSW 7_6_4
-
+********************************************************************
 To make histograms: cmsRun ConfFile(Z)_cfg.py 
 
   The user may specify on the command line: 
