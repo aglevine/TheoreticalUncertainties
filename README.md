@@ -14,7 +14,7 @@ To make histograms: cmsRun ConfFile(Z)_cfg.py
   W+Jets and Z+Jets files are listed in the submission directory
   
   
-  
+*********************************************************************  
 To calculate differences in acceptances due to QCD scale variations: 
   python computeSystByProductionAcceptance(Z).py [filename]
   
