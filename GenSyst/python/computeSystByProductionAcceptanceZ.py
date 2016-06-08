@@ -57,10 +57,13 @@ for j in range(0,nJets+1):
 	    else:
 		w_ref_scale = hdir.Get(name)
 		if '1005' in name:
-			print str(w_ref_scale.Integral(mu2pt[j]+1, 100, mu1pt[j]+1, 100)/weights[n][1])+ "double scale"
-		if '1009' in name: 
-			print str(w_ref_scale.Integral(mu2pt[j]+1, 100, mu1pt[j]+1, 100)/weights[n][1]) + " half scale"
-		int_scale.append( w_ref_scale.Integral(mu2pt[j]+1, 100, mu1pt[j]+1, 100)/weights[n][1])
+			print str(w_ref_scale.Integral(mu2pt[j]+1, 100, mu1pt[j]+1, 100)/weights[4][1])+ "double scale"
+		        int_scale.append( w_ref_scale.Integral(mu2pt[j]+1, 100, mu1pt[j]+1, 100)/weights[4][1])
+		elif '1009' in name: 
+			print str(w_ref_scale.Integral(mu2pt[j]+1, 100, mu1pt[j]+1, 100)/weights[8][1]) + " half scale"
+			int_scale.append( w_ref_scale.Integral(mu2pt[j]+1, 100, mu1pt[j]+1, 100)/weights[8][1])
+		else:
+			int_scale.append( w_ref_scale.Integral(mu2pt[j]+1, 100, mu1pt[j]+1, 100)/weights[n][1])
 		totalIntegral.append(w_ref_scale.Integral())
 		totalEntries.append(w_ref_scale.GetEntries())
 		
